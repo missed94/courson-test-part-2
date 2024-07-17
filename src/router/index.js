@@ -1,27 +1,19 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import Router from "vue-router";
+import PageProductSelection from "@/pages/PageProductSelection";
+import PagePersonalInformation from "@/pages/PagePersonalInformation";
+import PageConfirmOrder from "@/pages/PageConfirmOrder";
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
+  { path: "/", redirect: "/step1" },
+  { path: "/step1", component: PageProductSelection },
+  { path: "/step2", component: PagePersonalInformation },
+  { path: "/step3", component: PageConfirmOrder },
 ];
 
-const router = new VueRouter({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
