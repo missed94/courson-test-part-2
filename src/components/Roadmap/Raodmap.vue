@@ -3,7 +3,7 @@
     <div
       v-for="step in steps"
       :key="step"
-      :class="['step', { active: currentStep === step }]"
+      :class="['step p-3', { active: currentStep === step }]"
     >
       {{ step }}
     </div>
@@ -32,7 +32,6 @@ export default {
   justify-content: space-around;
 }
 .step {
-  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }

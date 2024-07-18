@@ -1,7 +1,5 @@
 <template>
-  <li
-    class="list-group-item d-flex align-items-center justify-content-between flex-wrap"
-  >
+  <li class="confirm-order-item list-group-item">
     <div class="d-flex align-items-center">
       <div class="me-1">
         <img
@@ -29,3 +27,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.confirm-order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+</style>

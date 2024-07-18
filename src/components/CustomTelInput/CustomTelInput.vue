@@ -1,8 +1,8 @@
 <template>
   <div class="custom-tel-input">
-    <label v-if="label" class="custom-tel-input__label">{{ label }}</label>
+    <label v-if="label" class="d-block mb-2">{{ label }}</label>
     <TheMask
-      class="custom-tel-input__input"
+      class="custom-tel-input__input p-2 w-100"
       v-model="editableValue"
       :placeholder="placeholder"
       :mask="mask"
@@ -52,14 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.custom-tel-input__label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
 .custom-tel-input__input {
-  width: 100%;
-  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }

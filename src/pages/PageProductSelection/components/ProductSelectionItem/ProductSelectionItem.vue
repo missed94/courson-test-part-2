@@ -1,7 +1,5 @@
 <template>
-  <li
-    class="d-flex align-items-center justify-content-between list-group-item flex-wrap"
-  >
+  <li class="product-selection-item list-group-item">
     <div class="d-flex align-items-center">
       <CustomCheckbox
         :value="selected"
@@ -52,3 +50,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.product-selection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+</style>

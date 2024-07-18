@@ -1,12 +1,16 @@
 <template>
-  <div class="custom-input">
-    <label v-if="label" class="custom-input__label">{{ label }}</label>
+  <div class="custom-input-number">
+    <label v-if="label" class="d-block mb-2">{{ label }}</label>
     <div class="d-flex align-items-center">
-      <button type="button" class="custom-input__button" @click="decrement">
+      <button
+        type="button"
+        class="custom-input-number__button p-2"
+        @click="decrement"
+      >
         -
       </button>
       <input
-        class="custom-input__input"
+        class="custom-input-number__input form-control p-2 w-100"
         type="number"
         :value="value"
         :placeholder="placeholder"
@@ -15,7 +19,11 @@
         :step="step"
         @input="updateValue"
       />
-      <button type="button" class="custom-input__button" @click="increment">
+      <button
+        type="button"
+        class="custom-input-number__button p-2"
+        @click="increment"
+      >
         +
       </button>
     </div>
@@ -70,27 +78,20 @@ export default {
 </script>
 
 <style scoped>
-.custom-input__label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.custom-input__input {
-  width: 100%;
-  padding: 0.5rem;
+.custom-input-number__input {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.custom-input__button {
-  padding: 0.5rem;
+.custom-input-number__button {
   border-radius: 4px;
   border: 1px solid #ccc;
   background-color: #f0f0f0;
   cursor: pointer;
+  width: 30px;
 }
 
-.custom-input__button:hover {
+.custom-input-number__button:hover {
   background-color: #e0e0e0;
 }
 </style>
